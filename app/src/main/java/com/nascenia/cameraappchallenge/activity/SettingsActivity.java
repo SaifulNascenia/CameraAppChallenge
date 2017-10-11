@@ -1,5 +1,6 @@
 package com.nascenia.cameraappchallenge.activity;
 
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
@@ -21,6 +22,7 @@ import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 public class SettingsActivity extends AppCompatActivity {
 
@@ -91,9 +93,15 @@ public class SettingsActivity extends AppCompatActivity {
         }
     }
 
+    @OnClick(R.id.done_textview)
+    public void backToPreviousActivity() {
+        this.finish();
+    }
+
    /* @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
         Log.i("method_Call", "sett");
     }*/
+
 }
